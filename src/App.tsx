@@ -7,25 +7,23 @@ import WelcomeOrg from './components/WelcomeOrg';
 import InputNewOrg from './components/InputNewOrg';
 import HomeOrg from './components/HomeOrg';
 import DecideOrg from './components/DecideOrg';
+import HomeMarkedOrg from './components/HomeMarkedOrg';
+import FocusOrg from './components/FocusOrg';
 
 function App() {
+	let compList = [
+		<WelcomeOrg designId="001" />,
+		<InputNewOrg designId="002" />,
+		<HomeOrg designId="004" />,
+		<DecideOrg designId="005" />,
+		<HomeMarkedOrg designId="006" />,
+		<FocusOrg designId="007" />
+	];
+	compList = compList.map((x, i) => <BoxWrapper key={i}>{x}</BoxWrapper>);
+
   return (
     <main className="border-box">
-			<BoxWrapper className="ba b--black mb2">
-				<WelcomeOrg />
-			</BoxWrapper>
-
-			<BoxWrapper className="ba b--black mb2">
-				<InputNewOrg />
-			</BoxWrapper>
-
-			<BoxWrapper className="ba b--black mb2">
-				<HomeOrg />
-			</BoxWrapper>
-
-			<BoxWrapper className="ba b--black mb2">
-				<DecideOrg />
-			</BoxWrapper>
+			{compList}
     </main>
   );
 }
