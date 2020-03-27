@@ -70,8 +70,16 @@ input[type="url"],
 	display: inline-block;
 }
 
+.pa2 {
+	padding: var(--spacing-small);
+}
+
 .mb2 {
 	margin-bottom: var(--spacing-small);
+}
+
+.mr2 {
+	margin-right: var(--spacing-small);
 }
 
 li.unmarked {
