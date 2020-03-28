@@ -89,3 +89,8 @@ li.unmarked {
 li.marked {
 	list-style-type: disc;
 }
+
+li.complete {
+	list-style-type: none;
+	text-decoration:line-through;
+}
