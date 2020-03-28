@@ -9,6 +9,7 @@ import HomeOrg from './components/HomeOrg';
 import DecideOrg from './components/DecideOrg';
 import HomeMarkedOrg from './components/HomeMarkedOrg';
 import FocusOrg from './components/FocusOrg';
+import HomeWithDoneOrg from './components/HomeWithDoneOrg';
 
 function App() {
 	let compList = [
@@ -17,7 +18,8 @@ function App() {
 		<HomeOrg designId="004" />,
 		<DecideOrg designId="005" />,
 		<HomeMarkedOrg designId="006" />,
-		<FocusOrg designId="007" />
+		<FocusOrg designId="007" />,
+		<HomeWithDoneOrg designId="008" />
 	];
 	compList = compList.map((x, i) => <BoxWrapper key={i}>{x}</BoxWrapper>);
 
