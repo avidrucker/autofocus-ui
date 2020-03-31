@@ -74,6 +74,10 @@ input[type="url"],
 	padding: var(--spacing-small);
 }
 
+.ma2 {
+	margin: var(--spacing-small);
+}
+
 .mb2 {
 	margin-bottom: var(--spacing-small);
 }
