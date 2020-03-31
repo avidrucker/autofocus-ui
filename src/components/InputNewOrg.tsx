@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
+
 import { HeaderMol } from './HeaderMol';
 import { BoxWrapper } from './BoxWrapper';
-import { Link } from 'react-router-dom';
 
 // (props: any)
 export default class InputNewOrg extends React.Component<{designId: string}, { btnDisabled: boolean, value: string }> {
@@ -54,7 +55,7 @@ export default class InputNewOrg extends React.Component<{designId: string}, { b
 					}
 					<BoxWrapper>
 						<Link to="/home">
-							<button disabled={this.state.btnDisabled}>Confirm</button>
+							<button disabled={this.state.btnDisabled}><strong>Confirm</strong></button>
 						</Link>
 					</BoxWrapper>
 				</section>

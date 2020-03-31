@@ -9,7 +9,7 @@ export const WelcomeHomeMol = () =>
 		<p>Tap the button below to add a new todo item.</p>
 		<BoxWrapper>
 			<Link to="/input-new">
-				<button>Add new todo</button>
+				<button><strong>Add new todo</strong></button>
 			</Link>
 		</BoxWrapper>
 	</section>
