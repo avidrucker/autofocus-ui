@@ -3,44 +3,58 @@ import './App.css';
 
 import { Switch, Route } from 'react-router-dom';
 
-import WelcomeOrg from './components/WelcomeOrg';
-import InputNewOrg from './components/InputNewOrg';
-import HomeOrg from './components/HomeOrg';
-import DecideOrg from './components/DecideOrg';
-import HomeMarkedOrg from './components/HomeMarkedOrg';
-import FocusOrg from './components/FocusOrg';
-import HomeWithDoneOrg from './components/HomeWithDoneOrg';
 import AllScreensOrg from './components/AllScreensOrg';
+import { prototypeMap } from './scripts';
 
 function App() {
+	const demoProp = {demo:"demo"};
+
   return (
     <main className="border-box">
 			<Switch>
+				{/* todo: refactor route to be a dynamic list generated from array of paths*/}
 				<Route
-					exact path='/input-new'
-					render={(props) => <InputNewOrg {...props} designId="002" />} />
+					exact path='/add-new'
+					render={() => prototypeMap("add-new", demoProp)} />
 				<Route
 					exact path='/home'
-					render={(props) => <HomeOrg {...props} designId="004" />} />
+					render={() => prototypeMap("home", demoProp)} />
 				<Route
-					exact path='/decide'
-					render={(props) => <DecideOrg {...props} designId="005" />} />
+					exact path='/review'
+					render={() => prototypeMap("review", demoProp)} />
 				<Route
 					exact path='/home-marked'
-					render={(props) => 
-						<HomeMarkedOrg {...props} designId="006" />} />
+					render={() => prototypeMap("home-marked", demoProp)} />
 				<Route
 					exact path='/focus'
-					render={(props) => <FocusOrg {...props} designId="007" />} />
+					render={() => prototypeMap("focus", demoProp)} />
 				<Route
 					exact path='/home-with-done'
-					render={(props) => <HomeWithDoneOrg {...props} designId="007" />} />
+					render={() => prototypeMap("home-with-done", demoProp)} />
 				<Route
 					exact path='/welcome'
-					render={(props) => <WelcomeOrg {...props} designId="001" />} />
+					render={() => prototypeMap("welcome", demoProp)} />
+
+				{/* PROTOTYPE DEMO ONLY ROUTES */}
+				<Route
+					exact path='/add-new-2'
+					render={() => prototypeMap("add-new-2", demoProp)} />
+				<Route
+					exact path='/add-new-3'
+					render={() => prototypeMap("add-new-3", demoProp)} />
+				<Route
+					exact path='/home-2'
+					render={() => prototypeMap("home-2", demoProp)} />
+				<Route
+					exact path='/home-3'
+					render={() => prototypeMap("home-3", demoProp)} />
+				<Route
+					exact path='/review-2'
+					render={() => prototypeMap("review-2", demoProp)} />
+
 				<Route
 					path='/'
-					component={AllScreensOrg} />
+					component={AllScreensOrg} />		
 			</Switch>
     </main>
   );
