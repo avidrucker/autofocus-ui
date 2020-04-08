@@ -1,35 +1,41 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import { BoxWrapper } from './BoxWrapper';
-import { InlineBoxWrapper } from './InlineBoxWrapper';
 
-import WelcomeOrg from './WelcomeOrg';
-import InputNewOrg from './InputNewOrg';
-import HomeOrg from './HomeOrg';
-import DecideOrg from './DecideOrg';
-import HomeMarkedOrg from './HomeMarkedOrg';
-import FocusOrg from './FocusOrg';
-import HomeWithDoneOrg from './HomeWithDoneOrg';
+import { prototypeMap } from '../scripts';
+import { LinkBtnMol } from './LinkBtnMol';
 
 export default function AllScreensOrg() {
 	let compList = [
-		<WelcomeOrg designId="001" />,
-		<InputNewOrg designId="002" />,
-		<HomeOrg designId="004" />,
-		<DecideOrg designId="005" />,
-		<HomeMarkedOrg designId="006" />,
-		<FocusOrg designId="007" />,
-		<HomeWithDoneOrg designId="008" />
+		//prototypeMap("welcome", {all:"all"}),
+		prototypeMap("welcome", ""),
+		prototypeMap("add-new", ""),
+		prototypeMap("home-3", ""),
+		prototypeMap("review", ""),
+		prototypeMap("home-marked", ""),
+		prototypeMap("focus", ""),
+		prototypeMap("home-with-done", {all:"all"})
 	];
-	compList = compList.map((x, i) => <InlineBoxWrapper key={i}>{x}</InlineBoxWrapper>);
+	compList = compList.map((x, i) =>
+		<section className="measure-narrow w5 pa2" key={i}>
+			<BoxWrapper className="h56 flex flex-column justify-between">
+				{x}
+			</BoxWrapper>
+		</section>);
 
   return (
-    <section>
-			<BoxWrapper>
-				<Link to="/welcome"><button>Try out app</button></Link>
-			</BoxWrapper>
-			{compList}
-    </section>
+		<section className="">
+			<section className="pt2 ph2">
+					<LinkBtnMol
+						className="b"
+						disabled={false}
+						text="Try out the app"
+						to="/welcome"
+					/>
+				</section>
+			<section className="flex flex-wrap">
+				{compList}
+			</section>
+		</section>
   );
 }
