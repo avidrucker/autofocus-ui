@@ -1,15 +1,18 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { Fragment } from 'react';
 
-import { BoxWrapper } from './BoxWrapper';
+import { LinkBtnMol } from './LinkBtnMol';
 
-export const WelcomeHomeMol = () =>
-	<section>
+// import { LoggerAtom } from './LoggerAtom';
+
+export const WelcomeHomeMol = (props: any) =>
+	<Fragment>
+	{/* todo: add styling to each component: className="flex flex-column items-center justify-between h-100 pa3 tc" */}
+		{/*<LoggerAtom label="demoCurrent" value={props.demoCurrent} />*/}
 		<p>Welcome to AutoFocus!</p>
 		<p>Tap the button below to add a new todo item.</p>
-		<BoxWrapper>
-			<Link to="/input-new">
-				<button><strong>Add new todo</strong></button>
-			</Link>
-		</BoxWrapper>
-	</section>
+		<LinkBtnMol
+			className="b"
+			text="Add Todo"
+			to="/add-new"
+		/>
+	</Fragment>
