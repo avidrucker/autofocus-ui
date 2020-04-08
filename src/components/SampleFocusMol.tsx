@@ -1,23 +1,33 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { Fragment } from 'react';
 
-import { BoxWrapper } from './BoxWrapper';
+import { LinkBtnMol } from './LinkBtnMol';
 
-export const SampleFocusMol = () =>
-	<section>
+export const SampleFocusMol = (props: any) =>
+	<Fragment>
 		<p>
 			<span>You are focusing on </span>
-			<strong>finish trig problem sets for today</strong>
+			<strong>{props.cmwtd}</strong>
 		</p>
-		<BoxWrapper>
-			<Link to="/home-marked">
-				<button>Return home without saving</button>
-			</Link>
-			
-			<button disabled>Stopping with work left</button>
+		<section className="flex flex-column">
+			<LinkBtnMol
+				className=""
+				disabled={true}
+				text="Return home without saving"
+				to="/home-marked"
+			/>
 
-			<Link to="/home-with-done">
-				<button><strong>Task is 100% complete</strong></button>
-			</Link>
-		</BoxWrapper>
-	</section>
+			<LinkBtnMol
+				className=""
+				disabled={true}
+				text="Stopping with work left"
+				to="/"
+			/>
+
+			<LinkBtnMol
+				className="b"
+				disabled={false}
+				text="Task is 100% complete"
+				to="/home-with-done"
+			/>
+		</section>
+	</Fragment>
