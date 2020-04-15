@@ -1,6 +1,7 @@
 {
-  "name": "autofocus-ui",
-  "version": "0.1.0",
+  "name": "@avidrucker/autofocus-ui",
+	"version": "0.1.0",
+	"description": "user interface component library for todo list management app and experiement",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
