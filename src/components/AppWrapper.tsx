@@ -1,4 +1,5 @@
 import React, { Fragment }  from 'react';
+import { styles } from './theming';
 
 export const AppWrapper = 
 	(props: any) =>
@@ -6,10 +7,10 @@ export const AppWrapper =
 		{
 			props.demo === "demo" &&
 			<section className="bg-black w-100">
-				{/* bg-pink */}
+				{/* bg-pink measure-very-narrow */}
 				<section
 					className={props.className + 
-						" flex flex-column vh-100 bg-white measure-very-narrow center"}>
+						` flex flex-column vh-100 bg-white center ${styles.global}`}>
 					{props.children}
 				</section>
 			</section>
