@@ -3,6 +3,7 @@ import React from 'react';
 import { HeaderMol } from './HeaderMol';
 import { LinkBtnMol } from './LinkBtnMol';
 import { AppWrapper } from './AppWrapper';
+import { styles } from './theming';
 
 // import { LoggerAtom } from './LoggerAtom';
 
@@ -25,7 +26,7 @@ export default class AddNewOrg extends React.Component
   };
 
   handleSubmit(event: any) {
-    alert('A todo was submitted: ' + this.state.value);
+    alert('A to-do was submitted: ' + this.state.value);
     event.preventDefault();
 	};
 	
@@ -44,12 +45,12 @@ export default class AddNewOrg extends React.Component
 				/>
 				{/* bg-green */}
 				<section className="flex flex-column justify-between h-100 pa3 tc">
-					<label htmlFor="todo-input">Enter a new todo:</label>
+					<label htmlFor="todo-input">Enter a new to-do:</label>
 					<section>
 						<textarea
 							onChange={this.handleChange}
 							id="todo-input"
-							className="w-100 h34"
+							className={`w-100 h34 pa2 ` + styles.textarea}
 							// style={{width: '100%'}}
 							placeholder="eg. Wash the dishes"
 							value={this.state.value}
@@ -58,7 +59,7 @@ export default class AddNewOrg extends React.Component
 						{/* now {this.state.value.length} */}
 						{
 							this.state.btnDisabled && this.state.value !== "" &&
-							<label>Please make todo longer</label>
+							<label>Please make to-do longer</label>
 						}
 					</section>
 					{
@@ -93,7 +94,7 @@ export default class AddNewOrg extends React.Component
 							<LinkBtnMol
 								className="b"
 								disabled={this.state.btnDisabled}
-								text="Confirm (default)"
+								text="Confirm"
 								to="/home"
 							/>
 						}
