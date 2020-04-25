@@ -7,7 +7,7 @@ import { SampleHomeMol2Unmarked } from './SampleHomeMol2Unmarked';
 import { SampleHomeMol3Unmarked } from './SampleHomeMol3Unmarked';
 import { SampleHomeMol2Marked } from './SampleHomeMol2Marked';
 import { SampleHomeMol1Marked1Complete } from './SampleHomeMol1Marked1Complete';
-import { LinkBtnMol } from './LinkBtnMol';
+// import { LinkBtnMol } from './LinkBtnMol';
 import { AppWrapper } from './AppWrapper';
 
 
@@ -31,7 +31,7 @@ export default function HomeOrg (props: any) {
 							<div>THE DEMO</div>
 						}
 				*/}
-				{/* 1 TODO */}
+				{/* 1 To-Do */}
 				{
 					props.h2 === "Home 1 Unmarked" &&
 					<SampleHomeMol1Unmarked demoCurrent="C" />
@@ -56,13 +56,13 @@ export default function HomeOrg (props: any) {
 					props.h2 === "Home With 1 Done" &&
 					<Fragment>
 						<SampleHomeMol1Marked1Complete demoCurrent="L" />
-						{!props.all &&
+						{/* {!props.all &&
 							<LinkBtnMol
 								className="b"
 								text="Return to all screens page"
 								to="/"
 							/>
-						}
+						} */}
 					</Fragment>
 				}
 			</section>
