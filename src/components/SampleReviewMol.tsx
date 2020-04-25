@@ -7,10 +7,10 @@ export const SampleReviewMol = (props: any) =>
 	<Fragment>
 		{/*<LoggerAtom label="demoCurrent" value={props.demoCurrent} />*/}
 		<p>
-			<span>Do you want to </span>
-			<strong>{props.current}</strong>
-			<span> more than </span>
-			<strong>{props.cmwtd}</strong>
+			<span>Do you want to<br /></span>
+			<strong>"{props.current}"<br /></strong>
+			<span> more than<br /></span>
+			<strong>"{props.cmwtd}"</strong>
 			<span>?</span>
 		</p>
 		<section className="flex flex-column">
@@ -23,7 +23,7 @@ export const SampleReviewMol = (props: any) =>
 						to="review-2"
 					/>
 					<LinkBtnMol
-						disabled={true}
+						disabled={false}
 						text="Yes"
 						to="/"
 					/>
@@ -33,7 +33,7 @@ export const SampleReviewMol = (props: any) =>
 				props.demoCurrent === "I" &&
 				<Fragment>
 					<LinkBtnMol
-						disabled={true}
+						disabled={false}
 						text="No"
 						to="/home-marked"
 					/>
@@ -46,8 +46,8 @@ export const SampleReviewMol = (props: any) =>
 				</Fragment>
 			}
 			<LinkBtnMol
-				disabled={true}
-				text="Stop Reviewing"
+				disabled={false}
+				text="Stop Review"
 				to="/home"
 			/>
 		</section>
