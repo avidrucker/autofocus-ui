@@ -17,7 +17,7 @@ export const SampleHomeMol3Unmarked = (props: any) =>
 				props.demoCurrent === "G" &&
 				<LinkBtnMol
 					className="b"
-					text="Review Todos (demo)"
+					text="Review To-Do's"
 					to="/review"
 				/>
 			}
@@ -25,13 +25,13 @@ export const SampleHomeMol3Unmarked = (props: any) =>
 				!props.demoCurrent &&
 				<LinkBtnMol
 					className="b"
-					text="Review Todos (default)"
+					text="Review To-Do's"
 					to="/review"
 				/>
 			}
 			<LinkBtnMol
-					disabled={true}
-					text="Add Todo (demo)"
+					disabled={false}
+					text="Add To-Do"
 					to="/add-new"
 				/>
 		</section>

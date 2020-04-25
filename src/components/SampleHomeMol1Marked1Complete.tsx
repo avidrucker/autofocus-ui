@@ -15,20 +15,20 @@ export const SampleHomeMol1Marked1Complete = (props: any) =>
 
 			<LinkBtnMol
 				className=""
-				disabled={true}
-				text="Focus on Todo"
+				disabled={false}
+				text="Focus on To-Do"
 				to="/focus"
 			/>
 			<LinkBtnMol
 				className=""
-				disabled={true}
-				text="Review Todos"
+				disabled={false}
+				text="Review To-Do's"
 				to="/review"
 			/>
 			<LinkBtnMol
 				className=""
-				disabled={true}
-				text="Add Todo"
+				disabled={false}
+				text="Add To-Do"
 				to="/add-new"
 			/>
 		</section>

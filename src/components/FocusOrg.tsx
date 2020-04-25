@@ -18,11 +18,11 @@ export default function FocusOrg (props: any) {
 			<section className="flex flex-column justify-between h-100 pa3 tc">
 				{
 					props.step === "K" &&
-					<SampleFocusMol cmwtd="pack for trip tomorrow (demo)" />	
+					<SampleFocusMol cmwtd="pack for trip tomorrow" />	
 				}
 				{
 					!props.step &&
-					<SampleFocusMol cmwtd="do the dishes (default)" />
+					<SampleFocusMol cmwtd="do the dishes" />
 				}
 			</section>
 		</AppWrapper>
