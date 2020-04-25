@@ -294,13 +294,37 @@ input[type="url"],
 	border-width: 1px;
 }
 
+.bw1 {
+	border-width: .125rem;
+}
+
+.bg-transparent {
+	background-color: transparent;
+}
+
+.link {
+	text-decoration: none;
+	transition: color .15s ease-in;
+}
+
+.bw2 {
+	border-width: .25rem;
+}
+
 .b--black {
 	border-color: black;
+}
+
+.b--white {
+	border-color: white;
 }
 
 .dib {
 	display: inline-block;
 }
+.dn {              display: none; }
+.di {              display: inline; }
+.db {              display: block; }
 
 li.unmarked {
 	list-style-type: circle;
@@ -560,4 +584,120 @@ li.complete {
 
 .bg-white {
 	background-color: white;
+}
+
+.f-6,
+.f-headline {
+  font-size: 6rem;
+}
+.f-5,
+.f-subheadline {
+  font-size: 5rem;
+}
+
+
+/* Type Scale */
+
+.f1 { font-size: 3rem; }
+.f2 { font-size: 2.25rem; }
+.f3 { font-size: 1.5rem; }
+.f4 { font-size: 1.25rem; }
+.f5 { font-size: 1rem; }
+.f6 { font-size: .875rem; }
+.f7 { font-size: .75rem; } /* Small and hard to read for many people so use with extreme caution */
+
+sans-serif {
+  font-family: -apple-system, BlinkMacSystemFont,
+               'avenir next', avenir,
+               'helvetica neue', helvetica,
+               ubuntu,
+               roboto, noto,
+               'segoe ui', arial,
+               sans-serif;
+}
+
+.serif {
+  font-family: georgia,
+               times,
+               serif;
+}
+
+.system-sans-serif {
+  font-family: sans-serif;
+}
+
+.system-serif {
+  font-family: serif;
+}
+
+
+/* Monospaced Typefaces (for code) */
+
+/* From http://cssfontstack.com */
+code, .code {
+  font-family: Consolas,
+               monaco,
+               monospace;
+}
+
+.courier {
+  font-family: 'Courier Next',
+               courier,
+               monospace;
+}
+
+
+/* Sans-Serif Typefaces */
+
+.helvetica {
+  font-family: 'helvetica neue', helvetica,
+               sans-serif;
+}
+
+.avenir {
+  font-family: 'avenir next', avenir,
+               sans-serif;
+}
+
+
+/* Serif Typefaces */
+
+.athelas {
+  font-family: athelas,
+               georgia,
+               serif;
+}
+
+.georgia {
+  font-family: georgia,
+               serif;
+}
+
+.times {
+  font-family: times,
+               serif;
+}
+
+.bodoni {
+  font-family: "Bodoni MT",
+                serif;
+}
+
+.calisto {
+  font-family: "Calisto MT",
+                serif;
+}
+
+.garamond {
+  font-family: garamond,
+               serif;
+}
+
+.baskerville {
+  font-family: baskerville,
+               serif;
+}
+
+.lato {
+	font-family: 'Lato', sans-serif;
 }
